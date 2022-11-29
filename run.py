@@ -26,7 +26,7 @@ def play(word):
             tries -= 1
             guessed_letters.append(guess)
             
-            else:
+        else:
             
             print("Good job", guess, "is the right word!")
             guessed_letters.append(guess)
@@ -35,13 +35,26 @@ def play(word):
             for index in indices:
                     word_as_list[index] = guess
             word_completion = "".join(word_as_list)
-            if "_" not in word_completion:
+        if "_" not in word_completion:
                     guessed = True    
         elif len(guess) == len(word) and guess.isalpha():
+         if guess in guessed_words:
+                print("You already guessed the word", guess)
+        elif guess != word:
+                    print(guess, "is not the word.")
+                    tries -= 1
+                    guessed_words.append(guess)
+        else:
+            guessed = True
+            word_completion = word
 
-            else:
-
-            print("Not a valid guess")
+        else:
+        print("Not a valid guess")
         print(display_hangman(tries))
         print(word_completion)
         print("\n")
+
+        if guessed:
+         print("Congrats, you guessed the word. You win!!!")
+        else:
+         print("Sorry you ran out of tries. The word was" + word + "try again next time")    
