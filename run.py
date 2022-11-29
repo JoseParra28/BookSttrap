@@ -1,7 +1,17 @@
 import random
 from word import wordsjson
 
-# username input 
+
+class Game:
+    """
+       Get input to determine username and start the game
+       
+    """
+
+     # this funtion chooses a random work in the works file
+
+
+     # username input 
 # this is a required input, the user mush enter correct caracters to be able to play
 def __init__(self, username):
         """
@@ -21,14 +31,7 @@ while len(user_name) < 1 or user_name.isalpha() is False:
     print('Please insert only letters')
     print('Please insert at least one letter')
     user_name = input("Please insert your name: ")
-
-class Game:
-    """
-       Get input to determine username and start the game
-       
-    """
-
-     # this funtion chooses a random work in the works file
+    
 def get_word():
     word = random.choice(wordsjson)
     return word.upper()
