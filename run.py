@@ -27,3 +27,9 @@ while True:
   else:
     wrong.append(guess)
     print('wrong',wrong)
+
+# user_name = input("Please insert your name: ")
+# while len(user_name) < 1 or user_name.isalpha() is False:
+#     print('Incorrect input. Please insert only letters')
+    
+#     user_name = input("Please insert your name: ")
