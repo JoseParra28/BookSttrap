@@ -4,9 +4,18 @@ words = ['programe', 'computer', 'questions']
 
 picked = random.choice(words)
 
+print('The word has', len(picked), 'letters.')
 
-correct = []
+
+correct = ['_'] * len(picked)
 wrong = []
+
+def update():
+  for i in correct:
+    print(i, end=' ')
+  print()
+
+update()  
 
 while True:
 
