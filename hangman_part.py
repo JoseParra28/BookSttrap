@@ -31,6 +31,7 @@ def parts(x):
         print(''  '|    /  ')
         print(''  '|       ')
         print('-----------')
+       
     if x == 4:
         print(''  '--------')
         print(''  '|     | ')
@@ -39,6 +40,7 @@ def parts(x):
         print(''  '|    / \ ')
         print(''  '|       ')
         print('-----------')
+        print('You have one more life!')
             
 
         

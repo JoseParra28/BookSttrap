@@ -2,29 +2,38 @@ import random
 from hangman_part import parts
 from time import sleep
 
-class game:
-  """
-  Get username input to start the game 
-  """
-  def __init__(self,username):
-    self.username
-    print(f"Welcome the HangMan, {self.user_name}. Get ready to play")
+# class game:
+#   """
+#   Get username input to start the game 
+#   """
+#   def __init__(self,username):
+#     self.username
+#     print(f"Welcome the HangMan, {self.username}. Get ready to play")
 
-def main():
-  """
-  Run input pre-game and restart 
-  """ 
+# def main():
+#   """
+#   Run input pre-game and restart 
+#   """ 
 username = input("Please insert your name\n")
 while len(username) < 1 or username.isalpha() is False:
   print('Please insert letter only\n')
   username = input("Please insert you name")
 
-words = ['program', 'computer', 'hello']
-picked = random.choice(words)
-print('The word has', len(picked), 'letters.')
-correct = ['_'] * len(picked)
-wrong = []
+# list = []
+# def username():
+#       while True:
+#         try:
+#           name = str(input("Please enter your first name:\n "))
+#           list.append(name)
+#           break
+#         except TypeError:
+#           print("Letters only please.")
+#           continue
+#         except EOFError:
+#           print("Please input something....")
+#           continue
 
+# username()
 
 def update():
    for i in correct:
@@ -39,6 +48,12 @@ def loading():
   print() 
 
 loading() 
+
+words = ['program', 'computer', 'hello']
+picked = random.choice(words)
+print('The word has', len(picked), 'letters.')
+correct = ['_'] * len(picked)
+wrong = []
 
 update() 
 parts(len(wrong)) 
@@ -62,6 +77,7 @@ while True:
       if guess not in wrong:
           wrong.append(guess)
           parts(len(wrong))
+          print('That is not correct, try another letter. You wrote:')
       else:
           print('You already guessed that!') 
       print(wrong)
