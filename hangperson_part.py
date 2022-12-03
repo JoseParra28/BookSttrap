@@ -19,7 +19,7 @@ def parts(x):
         print(''  '--------')
         print(''  '|     | ')
         print(''  '|     O ')
-        print(''  '|   - | - ')
+        print(''  '|    /|\ ')
         print(''  '|       ')
         print(''  '|       ')
         print('-----------')
@@ -27,7 +27,7 @@ def parts(x):
         print(''  '--------')
         print(''  '|     | ')
         print(''  '|     O ')
-        print(''  '|   - | - ')
+        print(''  '|    /|\ ')
         print(''  '|    /  ')
         print(''  '|       ')
         print('-----------')
@@ -36,11 +36,11 @@ def parts(x):
         print(''  '--------')
         print(''  '|     | ')
         print(''  '|     O ')
-        print(''  '|   - | - ')
+        print(''  '|    /|\ ')
         print(''  '|    / \ ')
         print(''  '|       ')
         print('-----------')
-        print('You have one more life!')
+        print('You have one extra life!')
             
 
         
