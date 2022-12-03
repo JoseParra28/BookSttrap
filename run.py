@@ -2,22 +2,24 @@ import random
 from hangman_part import parts
 from time import sleep
 
-# class game:
-#   """
-#   Get username input to start the game 
-#   """
-#   def __init__(self,username):
-#     self.username
-#     print(f"Welcome the HangMan, {self.username}. Get ready to play")
+class Game:
+  """
+  Get username input to start the game 
+  """
+  def __init__(self,username,welcome):
+    self.username
+    self.welcome
+    print(f"Welcome the HangMan, {self.username}. Get ready to play")
 
-# def main():
-#   """
-#   Run input pre-game and restart 
-#   """ 
 username = input("Please insert your name\n")
 while len(username) < 1 or username.isalpha() is False:
-  print('Please insert letter only\n')
-  username = input("Please insert you name")
+  print('Please insert letters only\n')
+  username = input("Please insert you name\n")
+
+def main():
+  """
+  Run input pre-game and restart 
+  """ 
 
 # list = []
 # def username():
@@ -39,7 +41,7 @@ def update():
    for i in correct:
     print(i, end=' ')
    print()
-print('Let me think of a word')
+print('Let me think of a word', username)
 
 def loading():
   for i in range(5):
