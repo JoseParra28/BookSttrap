@@ -11,31 +11,11 @@ class Game:
     self.welcome
     print(f"Welcome the HangMan, {self.username}. Get ready to play")
 
-username = input("Please insert your name\n")
+username = input("Welcome to HangMan 😎\nPlease insert your name\n")
 while len(username) < 1 or username.isalpha() is False:
-  print('Please insert letters only\n')
+  print('Please insert letters only ☠️ \n')
   username = input("Please insert you name\n")
 
-def main():
-  """
-  Run input pre-game and restart 
-  """ 
-
-# list = []
-# def username():
-#       while True:
-#         try:
-#           name = str(input("Please enter your first name:\n "))
-#           list.append(name)
-#           break
-#         except TypeError:
-#           print("Letters only please.")
-#           continue
-#         except EOFError:
-#           print("Please input something....")
-#           continue
-
-# username()
 
 def update():
    for i in correct:
@@ -71,6 +51,7 @@ while True:
     for i in picked:
       if i == guess:
         correct[index] = guess
+        print("That's correct!")
       index += 1
     update()  
     parts(len(wrong))
@@ -79,18 +60,35 @@ while True:
       if guess not in wrong:
           wrong.append(guess)
           parts(len(wrong))
-          print('That is not correct, try another letter. You wrote:')
+          print("That's not correct, try another letter. You wrote:", wrong)
       else:
           print('You already guessed that!') 
-      print(wrong)
   if len(wrong) > 4:
-    print('You loose')
+    print('You loose 🫂')
     print(' I picked', picked)
     break      
   if '_' not in correct:
-       print('Yay! You win😎') 
+       print('Yay! You win 🙌🏼') 
        break
 
+def replay(self):
+        """
+        Get the play input value to give to the user the chance to choose if 
+        want play another game or close the match
+        """
+        play = input("Do you want to do another game y/n ??: ").upper()
+        while play != 'Y' or play != 'N':
+            if play == "Y":
+                print('Brilliat!!')    
+                replay = Game(self,username,welcome)
+                replay.game_mode()
+            elif play == "N":
+                print("Thanks for your time")
+                print('Game Over')
+                exit()
+            else:
+                print("Invalid input, Y for yes and N for no ")
+                play = input("Do you want to do another game y/n ??: ").upper()
 
 
 
@@ -100,8 +98,7 @@ while True:
 
 
 
-# user_name = input("Please insert your name: ")
-# while len(user_name) < 1 or user_name.isalpha() is False:
-#     print('Incorrect input. Please insert only letters')
-    
-#     user_name = input("Please insert your name: ")
+
+
+
+
