@@ -1,17 +1,17 @@
 import random
-from hangman_part import parts
+from hangperson_part import parts
 from time import sleep
 
-class Game:
-  """
-  Get username input to start the game 
-  """
-  def __init__(self,username):
-    self.username
-    
-    print(f"Welcome the HangMan, {self.username}. Get ready to play")
+# class Game:
+#   """
+#   Get username input to start the game 
+#   """
+#   def __init__(self,username,welcome):
+#     self.username
+#     self.welcome
+#     print(f"Welcome the HangMan, {self.username}. Get ready to play")
 
-username = input("Welcome to HangMan 😎\nPlease insert your name\n")
+username = input("Welcome to HangPerson 😎\nPlease insert your name\n")
 while len(username) < 1 or username.isalpha() is False:
   print('Please insert letters only ☠️ \n')
   username = input("Please insert you name\n")
@@ -43,7 +43,7 @@ parts(len(wrong))
 while True:
 
   guess = input("Please guess a letter\n")
-  print('Let me check')
+  print('Let me check...')
   loading()
 
   if guess in picked:
@@ -51,7 +51,7 @@ while True:
     for i in picked:
       if i == guess:
         correct[index] = guess
-        print("That's correct!")
+        print("That's correct! 🤟")
       index += 1
     update()  
     parts(len(wrong))
@@ -60,15 +60,15 @@ while True:
       if guess not in wrong:
           wrong.append(guess)
           parts(len(wrong))
-          print("That's not correct, try another letter. You wrote:", wrong)
+          print("That's not correct 🥺, try another letter. You wrote:", wrong)
       else:
-          print('You already guessed that!') 
+          print('You already guessed that!🤯') 
   if len(wrong) > 4:
-    print('You loose 🫂')
+    print('You loose 🙀')
     print(' I picked', picked)
     break      
   if '_' not in correct:
-       print('Yay! You win 🙌🏼') 
+       print('Yay! You win🙌') 
        break
 
 # def replay(update):
