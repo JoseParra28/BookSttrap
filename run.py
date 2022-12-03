@@ -1,7 +1,6 @@
 import random
 from hangperson_part import parts
 from time import sleep
-
 # class Game:
 #   """
 #   Get username input to start the game 
@@ -13,7 +12,7 @@ from time import sleep
 
 username = input("Welcome to HangPerson 😎\nPlease insert your name\n")
 while len(username) < 1 or username.isalpha() is False:
-  print('Please insert letters only ☠️ \n')
+  print('Please insert letters only 💀 \n')
   username = input("Please insert you name\n")
 
 
@@ -60,15 +59,15 @@ while True:
       if guess not in wrong:
           wrong.append(guess)
           parts(len(wrong))
-          print("That's not correct 🥺, try another letter. You wrote:", wrong)
+          print("That's not correct 🥺, try another letter.\n You wrote:", wrong)
       else:
           print('You already guessed that!🤯') 
   if len(wrong) > 4:
-    print('You loose 🙀')
-    print(' I picked', picked)
+    print("Oh no",username,"you didn't win this time 💀\n Game over! 🎮")
+    print(' I picked', {picked})
     break      
   if '_' not in correct:
-       print('Yay! You win🙌') 
+       print('Yay!',username,'you won!!! 🙌') 
        break
 
 # def replay(update):
